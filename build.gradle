@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.9.6'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+   //mavenLocal()
+   //maven { url "http://palantir.bintray.com/releases" }
+}
+
+
+dependencies {
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.1.2'
+    testImplementation 'org.testng:testng:7.5'
+    testImplementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.14.0'
+    testImplementation group: 'io.qameta.allure', name: 'allure-java-commons', version: '2.14.0'
+    //testImplementation group: 'io.qameta.allure', name: 'allure-gradle', version: '2.5'
+    testImplementation 'io.qameta.allure:allure-assertj:2.14.0'
+    testImplementation group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.7'
+    testImplementation 'io.qameta.allure:allure-commandline:2.14.0'
+
+
+}
+
+test {
+    useTestNG()
+}
