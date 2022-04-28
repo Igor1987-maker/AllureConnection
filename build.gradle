@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.1.2'
-    testImplementation 'org.testng:testng:7.5'
+    testImplementation 'org.testng:testng:7.4.0'
     testImplementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.14.0'
     testImplementation group: 'io.qameta.allure', name: 'allure-java-commons', version: '2.14.0'
     //testImplementation group: 'io.qameta.allure', name: 'allure-gradle', version: '2.5'

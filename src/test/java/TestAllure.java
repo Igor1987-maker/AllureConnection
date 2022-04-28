@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 @Listeners(ListenerNG.class)
@@ -17,7 +18,8 @@ public class TestAllure {
         wd = new ChromeDriver();
         wd.navigate().to("https://www.google.com/");
         wd.manage().window().maximize();
-        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+      //  wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         String text = wd.findElement(By.className("lnXdpd")).getAttribute("alt");
         System.out.println(">>>>>>>>>>>>>>>>> " +text);
         Assert.assertTrue(text.equalsIgnoreCase("goooooogle"));
